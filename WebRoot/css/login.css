@@ -1,0 +1,90 @@
+*{
+    padding:0;margin:0;
+    text-decoration:none;
+    color:#fff;
+}
+body{
+    background:url("../img/light.jpg");
+}
+.boss{
+    width:1920px;
+    height:900px;
+    overflow:hidden;
+    position:relative;
+}
+.boxData{
+    background:rgba(0,0,0,0.1);
+    position:absolute;
+    z-index: 10;
+}
+.boxRain{
+    background:rgba(0,0,0,0);
+    position:absolute;
+    z-index: 5;
+}
+.box{
+    width:500px;
+    height:260px;
+   text-align:center;
+    position:relative;
+    margin:200px auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    padding:20px 0;
+    background:rgba(255,255,255,0.2);
+}
+.box table{
+    margin:50px auto;
+}
+.box table tr td{
+    text-align: left;
+    line-height: 30px;
+    position:relative;
+}
+.box table tr .in{
+    width:200px;height:30px;
+    font-size:15px;
+    background:rgba(0,0,0,0.1);
+}
+.box table tr .button{
+    width:80px;height:30px;
+    margin:10px;
+    color:#000;
+}
+.box table tr td p{
+    font-size:12px;
+    text-align:right;
+}
+.img{
+    position:absolute;
+    background:url("../img/rain.png") no-repeat;
+    top:-100px;
+    border:0;
+}
+.box .regBut{
+    cursor:pointer;
+    font-weight:bold;
+}
+.warning{
+	width:250px;height:30px;
+	position:absolute;
+	top:75px;left:160px;
+	color:#f00;
+	opacity:0;
+	font-size:25px;
+	text-align:center;
+	line-height:30px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.4);
+}
+/* .warning .content{
+	width:200px;height:55px;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	top:-60px;
+	font-size:10px;
+	text-align:center;
+	line-height:50px;
+	color:#fff;
+} */

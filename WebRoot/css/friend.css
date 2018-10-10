@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+*{
+	margin:0;padding:0;
+	list-style: none;
+}
+#kind{
+	width:260px;height:35px;
+	line-height:35px;
+	font-size:30px;
+	font-weight:bold;
+	padding-left:40px;
+	cursor:pointer;
+	background-position:15px 8px;
+	background-repeat: no-repeat;
+	margin-bottom:1px;
+	background-size:20px;
+}
+#kind span{
+	font-weight:900;
+}
+.box .ul{
+	display:block;
+}
+.box .ul li{
+	width:280px;height:50px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.1);
+	margin:1px 0;
+	padding:0 10px;
+	position:relative;
+}
+.box .ul li:hover{
+	background:rgba(0,0,0,0.2);
+	cursor:pointer;
+}
+.box .nocurrent{
+	background:rgba(0,0,0,0.3);
+	background-image:url("../img/JIANTOU1.png");
+}
+.box .current{
+	background:rgba(0,0,0,0.3);
+	background-image:url("../img/JIANTOU2.png");
+}
+.box .ul li .img{
+	width:50px;
+	border-radius:2px;
+	margin:0 5px;
+	opacity:0.5;
+}
+.box .ul li .name{
+	width:230px;height:30px;
+	position:absolute;
+	left:70px;top:0px;
+	font-size:20px;
+	line-height:30px;
+}
+.box .ul li .state{
+	width:230px;height:20px;
+	position:absolute;
+	left:70px;top:30px;
+	font-size:14px;
+	line-height:20px;
+	color:#555;
+}
+.box .ul li .new{
+	display:none;
+	width:30px;height:20px;
+	border-radius:10px;
+	position:absolute;
+	right:20px;top:18px;
+	background:#F56C0B;
+	color:#fff;
+	text-align:center;
+	line-height:20px;
+}
+.box .ul li .del{
+	display:none;
+	width:70px;height:50px;
+	position:absolute;
+	right:0px;top:0px;
+	border-radius:5px;
+	color:RED;
+	font-size:40px;
+	font-weight:bold;
+	background:none;
+	text-align:center;
+	line-height:50px;
+}

@@ -1,0 +1,635 @@
+*{
+    margin:0;padding:0;
+    text-decoration: none;
+    list-style:none;	
+    font-family: "宋体";
+}
+body{
+	width:100%;heigh:100%;
+    -webkit-background-size:1920px 1080px;/*设置背景大小 */
+    background-size:1920px 1080px;	/*设置背景大小 */
+    position:relative;
+}
+.menu{
+    width:300px;height:600px;
+    position:absolute;
+    -webkit-border-radius:10px;	/*设置圆角大小 */
+    -moz-border-radius:10px;
+    border-radius:10px;
+    border:1px solid #000;
+    left:50px;top:100px;
+    font-size:20px;
+    font-weight:bold;
+    overflow:hidden;
+}
+.charWindow{
+    width:600px;height:400px;
+    position:absolute;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    left:380px;top:100px;
+    overflow:hidden;
+    border:1px solid #222;
+}
+.menu .title{
+    width:300px;height:50px;
+    color:#fff;
+    position:absolute;
+    text-align:center;
+    line-height:50px;
+    background:rgba(0,0,0,0.8);
+}
+.menu .content{
+    width:300px;height:500px;
+    background:rgba(255,255,255,0.5);
+    position:absolute;
+    top:50px;left:0;
+    border:none;
+}
+.menu .footMenu{
+    width:300px;height:50px;
+    position:absolute;
+    bottom:0;left:0;
+    background:rgba(0,0,0,0.7);
+}
+.menu .footMenu .other, .menu .footMenu .current{
+    width:149px;height:50px;
+    text-align:center;
+    line-height:50px;
+    position:absolute;
+    color:#fff;
+     background:rgba(0,0,0,0.3);
+}
+.menu .footMenu #nearby{
+    right:0;
+}
+.menu .footMenu #friend:hover,.menu .footMenu #nearby:hover{
+    background:rgba(0,100,0,0.3);
+    cursor:pointer;
+}
+.menu .footMenu .current{
+   background:rgba(0,0,0,0.9);
+}
+.charWindow .title{
+    width:600px;height:50px;
+    color:#fff;
+    position:absolute;
+    text-align:center;
+    line-height:50px;
+    background:rgba(0,0,0,0.8);
+    left:0;
+    z-index:5;
+}
+.charWindow .content{
+   width:598px;height:300px;
+    color:#fff;
+    top:50px;left:0;
+    background:rgba(0,0,0,0.2);
+    position:absolute;
+    border:1px solid #000;
+    overflow:auto;
+}
+.charWindow .footMenu{
+    width:590px;height:40px;
+    position:absolute;
+    background:rgba(0,0,0,0.8);
+    bottom:0;left:0;
+    padding:5px;
+}
+.charWindow .footMenu .face{
+    width:50px;height:45px;
+    float:left;
+    margin-left:10px;
+    border-radius: 10px;
+    background:url("../img/bq.png") no-repeat;
+}
+.charWindow .footMenu .input{
+    width:440px;height:35px;
+    float:left;
+    border-radius: 10px;
+    margin:0 2px;
+    background:none;
+    color:#fff;
+    font-size:20px;
+}
+.charWindow .footMenu .send{
+    width:80px;height:40px;
+    color:#fff;
+    float:right;
+    border-radius: 10px;
+    background:none;
+}
+.charWindow .close{
+	width:50px;height:50px;
+	position:absolute;
+	right:0px;top:0px;
+	color:#fff;
+	background:rgba(255,255,255,0.1);
+	font-size:40px;
+	z-index:10;
+	text-align:center;
+	line-height:50px;
+	border-radius:5px;
+}
+.charWindow .close:hover{
+	background:rgba(255,255,255,0.2);
+	cursor:pointer;
+}
+.charWindow .content .messageBox{
+	max-width:400px;
+	float:left;
+	margin-right:300px;
+	position:relative;
+}
+.messageBox .messageImg{
+	width:50px;height:50px;
+	float:left;
+}
+.messageBox .messageName{
+	display:none;
+}
+.messageBox .messageText{
+	font-size:20px;
+	color:#fff;
+	text-align:left;
+	float:left;
+	background:rgba(0,0,0,0.5);
+	padding:10px;
+	border-radius:10px;
+}
+.charWindow .content .myMessageBox{
+	max-width:400px;
+	float:right;
+	margin-left:300px;
+	position:relative;
+}
+.myMessageBox .messageImg{
+	width:50px;height:50px;
+	float:right;
+}
+.myMessageBox .messageName{
+	display:none;
+}
+.myMessageBox .messageText{
+	font-size:20px;
+	color:#fff;
+	text-align:right;
+	float:right;
+	background:rgba(0,0,0,0.5);
+	padding:10px;
+	border-radius:10px;
+}
+.myMessageBox .messagePrompt{
+	width:40px;height:30px;
+	border:1px solid green;
+}
+.userInfo{
+	width:300px;height:400px;
+	background:rgba(0,0,0,0.2);
+	position:absolute;
+	left:350px;top:200px;
+	border-radius:10px;
+	overflow:hidden;
+	display:none;
+	color:#fff;
+	font-weight:bold;
+	border:1px solid #222;
+}
+.userInfo .close{
+	width:20px;height:20px;
+	position:absolute;
+	right:0;top:0;
+	text-align:center;
+	line-height:20px;
+	cursor: pointer;
+	background:rgba(0,0,0,0.3);
+	border-radius:2px;
+}
+.userInfo .img{
+	width:220px;height:220px;
+	position:absolute;
+	left:40px;top:20px;
+	border-radius:10px;
+}
+.userInfo button{
+	width:70px;height:40px;
+	position:absolute;
+	bottom:5;
+	background:rgba(0,0,0,0.3);
+	border:none;
+}
+.userInfo button:hover{
+	background:rgba(0,0,0,0.4);
+	cursor:pointer;
+}
+.userInfo .but1{
+	left:50px;
+	font-weight:bold;
+}
+.userInfo .but2{
+	left:200px;
+	font-weight:bold;
+}
+.userInfo p{
+	width:200px;height:30px;
+	position:absolute;
+	text-align:center;
+
+}
+.userInfo .text1{
+	width:45px;
+	bottom:120px;left:30px;
+	line-height:30px;
+	color:#000;
+}
+.userInfo .text3{
+	bottom:120px;left:75px;
+	text-align:left;
+	font-size:20px;
+	line-height:30px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+.userInfo .text2{
+	width:45px;
+	bottom:60px;left:30px;
+	color:#000;
+}
+.userInfo .text4{
+	height:60px;
+	text-align:left;
+	font-size:15px;
+	left:75px;bottom:50px;
+	line-height:60px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+.addFriend{
+	background:rgba(0,0,0,0.4);
+	position:absolute;
+	left:650px;top:200px;
+	border-radius:5px;
+	overflow:hidden;
+	display:none;
+	font-size:20px;
+	text-align:center;
+	font-weight:bold;
+	padding:20px;
+	border:1px solid #222;
+}
+.addFriend p{
+	font-size:30px;
+	width:200px;height:30px;
+	text-align:center;
+	line-height:30px;
+}
+.addFriend ul li,.addFriend ul li input{
+	width:200px;height:30px;
+	line-height:30px;
+	background:rgba(0,0,0,0.3);
+	cursor:pointer;
+	margin-bottom:2px;
+	color:#fff;
+}
+.addFriend ul .current{
+	width:198px;height:28px;
+	border:1px solid green;
+}
+.addFriend ul li input{
+	background:rgba(255,255,255,0.3);
+	border:1px solid #000;
+	color:#000;
+	font-size:20px;
+	text-align:center;
+}
+.addFriend ul li:hover{
+	background:rgba(0,0,0,0.4);
+}
+.addFriend .newKind{
+	cursor:pointer;
+	background:rgba(0,0,0,0.2);
+	color:#fff;
+}
+.addFriend button{
+	width:70px;height:40px;
+	position:absolute;
+	margin-top:2px;
+	bottom:1;
+	background:rgba(0,0,0,0.3);
+	border:none;
+	color:#fff;
+}
+.addFriend button:hover{
+	background:rgba(0,0,0,0.4);
+	cursor:pointer;
+}
+.addFriend .but1{
+	left:50px;
+}
+.addFriend .but2{
+	left:130px;
+}
+.warning{
+	width:200px;height:50px;
+	position:relative;
+	margin:0px auto;
+}
+.warning .content{
+	width:200px;height:55px;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	top:-60px;
+	font-size:30px;
+	text-align:center;
+	line-height:50px;
+	color:#fff;
+}
+.checkResult{
+	display:none;
+    width:400px;
+    height:300px;
+    font-weight:bold;
+    text-align:center;
+    position:relative;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+    margin:200px auto;
+    background:rgba(0,0,0,0.9);
+    color:#fff;
+}
+.checkResult .result{
+	 width:400px;
+    height:130px;
+      font-size:40px;
+     position:absolute;
+      line-height:130px;
+      top:0;
+}
+.checkResult .showtime{
+	 width:400px;
+    height:130px;
+     font-size:150px;
+     position:absolute;
+      line-height:130px;
+      top:100px;
+}
+.checkResult .hint{
+	 width:400px;
+    height:20px;
+     font-size:12px;
+     position:absolute;
+      line-height:20px;
+      top:260px;
+}
+
+.sao{
+    width:180px;
+    height:320px;
+    background:rgba(0,0,0,0.5);
+    margin:50px auto;
+    border-radius:20px;
+    display:none; 
+    position:absolute;
+    border:2px solid black;
+    color:#DDD;
+}
+.sao li{
+    list-style: none;
+    font-size:30px;
+    border-radius:20px;
+     margin:2px 5px;
+    text-align:center;
+    border:2px solid black;
+    font-weight:bold;
+}
+.sao li:hover{
+    background:rgba(0,0,0,0.8);
+    cursor:pointer;
+}
+.sao .myself{
+	 width:170px;
+    height:25px;
+	 font-size:20px;
+	 border:none;
+	 overflow:hidden;
+}
+.sao .myself:hover{
+	background:none;
+	cursor:auto;
+}
+.sao .img{
+    width:100px;
+    border:2px solid black;
+    border-radius:10px;
+    margin:4px 40px;
+    margin-bottom:0px;
+}
+.sao .img:hover{
+    background:rgba(0,0,0,0.8);
+    cursor:pointer;
+}
+.modifyInfo{
+	width:300px;height:400px;
+	background:rgba(0,0,0,0.2);
+	position:absolute;
+	left:350px;top:200px;
+	border-radius:10px;
+	overflow:hidden;
+	display:none;
+	color:#fff;
+	font-weight:bold;
+	border:1px solid #222;
+}
+.modifyInfo .close{
+	width:20px;height:20px;
+	position:absolute;
+	right:0;top:0;
+	text-align:center;
+	line-height:20px;
+	cursor: pointer;
+	background:rgba(0,0,0,0.3);
+	border-radius:2px;
+}
+.modifyInfo .img{
+	width:220px;height:220px;
+	position:absolute;
+	left:40px;top:20px;
+	border-radius:10px;
+}
+.modifyInfo button{
+	width:70px;height:40px;
+	position:absolute;
+	bottom:5;
+	background:rgba(0,0,0,0.3);
+	border:none;
+}
+.modifyInfo button:hover{
+	background:rgba(0,0,0,0.4);
+	cursor:pointer;
+}
+.modifyInfo .but1{
+	left:50px;
+	font-weight:bold;
+}
+.modifyInfo .but2{
+	left:200px;
+	font-weight:bold;
+}
+.modifyInfo p{
+	width:200px;height:30px;
+	position:absolute;
+	text-align:center;
+	cursor:pointer;
+}
+.modifyInfo .text1{
+	width:45px;
+	bottom:120px;left:30px;
+	line-height:30px;
+	color:#000;
+}
+.modifyInfo .text3{
+	bottom:120px;left:75px;
+	text-align:left;
+	font-size:20px;
+	line-height:30px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+.modifyInfo .text2{
+	width:45px;
+	bottom:60px;left:30px;
+	color:#000;
+}
+.modifyInfo .text4{
+	height:60px;
+	text-align:left;
+	font-size:15px;
+	left:75px;bottom:50px;
+	line-height:60px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+.modifyInfo input{
+	width:200px;height:30px;
+	border:1px solid red;;
+	background:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#111;
+}
+.modifyInfo .text4 input{
+	width:200px;height:60px;
+	border:none;
+	background:none;
+}
+.delFriend{
+	display:none;
+	width:250px;
+	height:100px;
+	position:absolute;
+	left:400px;top:300px;
+	background:rgba(0,0,0,0.8);
+	border-radius:10px;
+	color:#fff;
+}
+.delFriend p{
+	width:250px;
+	text-align:center;
+	line-height:25px;
+}
+.delFriend p span{
+	font-size:15px;
+	font-weight:bold;
+}
+.delFriend button{
+	width:70px;height:40px;
+	position:absolute;
+	margin-top:2px;
+	bottom:1;
+	background:rgba(0,0,0,0.3);
+	border:none;
+	color:#fff;
+}
+.delFriend button:hover{
+	background:rgba(0,0,0,0.4);
+	cursor:pointer;
+}
+.delFriend .but1{
+	left:50px;
+}
+.delFriend .but2{
+	left:130px;
+}
+.sysSet{
+	display:none;
+	width:200px;height:200px;
+	background:rgba(0,0,0,0.3);
+	border-radius:10px;
+	position:absolute;
+	top:200px;left:400px;
+	font-size:20px;
+	text-align:center;
+	color:#fff;
+}
+.sysSet .close{
+	position:absolute;
+	right:0;top:0;
+	cursor:pointer;
+}
+.sysSet .desc{
+	line-height:30px;
+	text-align:left;
+}
+.sysSet .desc1{
+	line-height:20px;
+	font-size:20px;
+	margin-top:10px;
+	background:rgba(0,0,0,0.2);
+	font-size:15px;
+}
+.sysSet .soundSet{
+	width:170px;heght:30px;
+	margin:0px auto;
+	background:rgba(0,0,0,0.2);
+}
+.sysSet .bgSet{
+	width:170px;heght:30px;
+	margin:0px auto;
+	background:rgba(0,0,0,0.5);
+}
+.sysSet .sleft{
+	width:30px;height:30px;
+	background:url("../img/lef.png") no-repeat;
+	float:left;
+	cursor:pointer;
+}
+.sysSet .sright{
+	width:30px;height:30px;
+	background:url("../img/rig.png") no-repeat;
+	float:left;
+	cursor:pointer;
+}
+.sysSet .showContent{
+	width:100px;height:30px;
+	float:left;
+	font-size:20px;
+	margin:0 5px;
+	background:rgba(0,0,0,0.5);
+	line-height:30px;
+}
+.sysSet button{
+	width:70px;height:40px;
+	position:absolute;
+	margin-top:2px;
+	bottom:1;left:70px;
+	background:rgba(0,0,0,0.3);
+	border:none;
+	color:#fff;
+	cursor:pointer;
+}
